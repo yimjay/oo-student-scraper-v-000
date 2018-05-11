@@ -16,7 +16,11 @@ class Scraper
     student = {}
     profile = Nokogiri::HTML(open(profile_url))
     student[:profile_quote] = profile.css(".profile-quote").text
-    student[:bio] = profile.css(".description-holder").text
+    student[:bio] = profile.css(".description-holder p").text
+    
+    check if twitter, linkedin, github, blog
+    
+    profile.include?()
     
   end
 
