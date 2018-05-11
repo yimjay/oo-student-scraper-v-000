@@ -20,7 +20,7 @@ class Scraper
     
     check if twitter, linkedin, github, blog
     
-    profile.include?()
+    profile.css("")
     
   end
 
