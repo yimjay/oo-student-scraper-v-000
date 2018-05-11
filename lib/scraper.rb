@@ -18,10 +18,10 @@ class Scraper
     student[:profile_quote] = profile.css(".profile-quote").text
     student[:bio] = profile.css(".description-holder p").text
     
-    profile.css(".social-icon-container a").collect {|s| s.attribute("href").value}.each do |link|
+    profile.css(".social-icon-container a").map {|s| s.attribute("href").value}.each do |link|
       if link.include?("twitter")
         student[:twitter] = link
-      elsif link.include?("linked")
+      elsif link.include?("linkedin")
         student[:linkedin] = link
       elsif link.include?("github")
         student[:github] = link
