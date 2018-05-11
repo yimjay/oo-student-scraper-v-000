@@ -20,7 +20,9 @@ class Scraper
     
     check if twitter, linkedin, github, blog
     
-    profile.css(".social-icon-container a").map {|s| s.attr('href')}.each do ||
+    profile.css(".social-icon-container a").map {|s| s.attribute("href").value}.each do |link|
+      if link.include?("twitter")
+        student[:twitter] = 
     
     
   end
