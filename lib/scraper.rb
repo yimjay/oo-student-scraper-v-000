@@ -14,7 +14,7 @@ class Scraper
 
   def self.scrape_profile_page(profile_url)
     profile = Nokogiri::HTML(open(profile_url))
-    profile.css()
+    profile.css(".student-profile")
   end
 
 end
